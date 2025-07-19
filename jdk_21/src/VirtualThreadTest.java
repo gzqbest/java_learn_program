@@ -16,6 +16,7 @@ public class VirtualThreadTest {
         虚拟线程打破了平台线程和操作系统一一对应，虚拟线程等待时（io -> cpu 空闲）将它持有的物理线程释放给其它虚拟线程使用
         jdk 虚拟线程 被jdk 调度
         提高系统的吞吐量
+        虚拟线程适合于io密集型，而不是cpu 内存密集型
          */
         List<Thread> list = IntStream.range(0, 4).mapToObj(new IntFunction<Thread>() {
             @Override
